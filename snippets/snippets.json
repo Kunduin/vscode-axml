@@ -1,0 +1,994 @@
+{
+  "my.alert": {
+    "prefix": "my.a",
+    "body": [
+      "my.alert({",
+      "\ttitle: '',",
+      "\tcontent: '',",
+      "\tbuttonText: '确定',",
+      "\tsuccess: () => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "alert警告框"
+  },
+  "my.confirm": {
+    "prefix": "my.co",
+    "body": [
+      "my.confirm({",
+      "\ttitle: '',",
+      "\tcontent: '',",
+      "\tconfirmButtonText: '确定',",
+      "\tcancelButtonText: '取消',",
+      "\tsuccess: (res) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "confirm 确认框"
+  },
+  "my.prompt": {
+    "prefix": "my.pro",
+    "body": [
+      "my.prompt({",
+      "\ttitle: '',",
+      "\tmessage: '',",
+      "\tplaceholder: '',",
+      "\tokButtonText: '确定',",
+      "\tcancelButtonText: '取消',",
+      "\tsuccess: (res) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "promote 输入框"
+  },
+  "my.navigateTo": {
+    "prefix": "my.nav",
+    "body": ["my.navigateTo({", "\turl: '$0',", "})"],
+    "description": "跳转至某个指定页面"
+  },
+  "my.redirectTo": {
+    "prefix": "my.red",
+    "body": ["my.redirectTo({", "\turl: '$0',", "})"],
+    "description": "重定向至某个指定页面"
+  },
+  "my.navigateBack": {
+    "prefix": "my.navb",
+    "body": ["my.navigateBack({", "\tdelta: '1',", "})"],
+    "description": "关闭当前页面，返回上一级或多级页面"
+  },
+  "my.reLaunch": {
+    "prefix": "my.reL",
+    "body": ["my.reLaunch({", "\turl: '$0',", "})"],
+    "description": "关闭当前所有页面，跳转到应用内的某个指定页面"
+  },
+  "my.switchTab": {
+    "prefix": "my.swt",
+    "body": ["my.switchTab({", "\turl: '$0',", "})"],
+    "description": "跳转到指定 tabBar 页面"
+  },
+  "my.setNavigationBar": {
+    "prefix": "my.snb",
+    "body": [
+      "my.setNavigationBar({",
+      "\ttitle: '$0',",
+      "\tbackgroundColor: '',",
+      "})"
+    ],
+    "description": "设置导航栏文字及样式"
+  },
+  "my.showActionSheet": {
+    "prefix": "my.sas",
+    "body": [
+      "my.showActionSheet({",
+      "\ttitle: '',",
+      "\titems: [$1],",
+      "\tcancelButtonText: '取消',",
+      "\tdestructiveBtnIndex: 0,",
+      "\tsuccess: (res) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "显示操作菜单"
+  },
+  "my.showToast": {
+    "prefix": "my.st",
+    "body": [
+      "my.showToast({",
+      "\ttype: 'none',",
+      "\tcontent: '$0',",
+      "\tduration: 3000,",
+      "})"
+    ],
+    "description": "toast提示"
+  },
+  "my.showLoading": {
+    "prefix": "my.sl",
+    "body": ["my.showLoading({", "\tcontent: '$0',", "\tdelay: 0,", "})"],
+    "description": "显示加载提示"
+  },
+  "my.hideToast": {
+    "prefix": "my.ht",
+    "body": ["my.hideToast()"],
+    "description": "隐藏toast提示"
+  },
+  "my.hideLoading": {
+    "prefix": "my.hl",
+    "body": ["my.hideLoading()"],
+    "description": "隐藏加载提示"
+  },
+  "my.hideKeyboard": {
+    "prefix": "my.hdb",
+    "body": ["my.hideKeyboard()"],
+    "description": "隐藏键盘"
+  },
+  "my.pageScrollTo": {
+    "prefix": "my.pgst",
+    "body": ["my.pageScrollTo({", "\tscrollTop: 100$0,", "})"],
+    "description": "滚动到页面的目标位置"
+  },
+  "onPullDownRefresh": {
+    "prefix": "opr",
+    "body": ["onPullDownRefresh() {", "\t$0", "},"],
+    "description": "下拉刷新"
+  },
+  "my.stopPullDownRefresh": {
+    "prefix": "my.spr",
+    "body": ["my.stopPullDownRefresh()"],
+    "description": "停止当前页面的下拉刷新"
+  },
+  "my.showNavigationBarLoading": {
+    "prefix": "my.snl",
+    "body": ["my.showNavigationBarLoading()"],
+    "description": "显示导航栏 loading"
+  },
+  "my.hideNavigationBarLoading": {
+    "prefix": "my.hnl",
+    "body": ["my.hideNavigationBarLoading()"],
+    "description": "隐藏导航栏 loading"
+  },
+  "my.chooseCity": {
+    "prefix": "my.ch",
+    "body": [
+      "my.chooseCity({",
+      "\tshowLocatedCity: false,",
+      "\tshowHotCities: true,",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: () => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "选择城市"
+  },
+  "my.tradePay": {
+    "prefix": "my.tp",
+    "body": [
+      "my.tradePay({",
+      "\torderStr: '$2', // App支付使用",
+      "\ttradeNO: '', // 当面付使用",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: () => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "唤起支付"
+  },
+  "my.paySignCenter": {
+    "prefix": "my.psc",
+    "body": [
+      "my.paySignCenter({",
+      "\tsignStr: '$2', // 签约字符串",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "支付代扣签约"
+  },
+  "my.startZMVerify": {
+    "prefix": "my.zm",
+    "body": [
+      "my.startZMVerify({",
+      "\tbizNo: '$2',",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "芝麻认证"
+  },
+  "my.textRiskIdentification": {
+    "prefix": "my.tri",
+    "body": [
+      "my.textRiskIdentification({",
+      "\tcontent: '$2',",
+      "\ttype: ['keyword', '0', '1', '2', '3'],",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "文本风险识别"
+  },
+  "my.chooseImage": {
+    "prefix": "my.ci",
+    "body": [
+      "my.chooseImage({",
+      "\tcount: 1,",
+      "\tsourceType: ['camera','album'],",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "拍照或从手机相册中选择图片"
+  },
+  "my.previewImage": {
+    "prefix": "my.pi",
+    "body": [
+      "my.previewImage({",
+      "\tcurrent: 0,",
+      "\turls: [],",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "预览图片"
+  },
+  "my.saveImage": {
+    "prefix": "my.si",
+    "body": [
+      "my.saveImage({",
+      "\turl: '$2',",
+      "\tshowActionSheet: true,",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "保存图片"
+  },
+  "my.compressImage": {
+    "prefix": "my.coi",
+    "body": [
+      "my.compressImage({",
+      "\tapFilePaths: [$2],",
+      "\tcompressLevel: 4,",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "压缩图片"
+  },
+  "my.getImageInfo": {
+    "prefix": "my.gii",
+    "body": [
+      "my.getImageInfo({",
+      "\tsrc: '$2',",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "获取图片信息"
+  },
+  "my.getLocation": {
+    "prefix": "my.gl",
+    "body": [
+      "my.getLocation({",
+      "\tcacheTimeout: 60,",
+      "\ttype: 0,",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "获取用户当前的地理位置信息"
+  },
+  "my.openLocation": {
+    "prefix": "my.ol",
+    "body": [
+      "my.openLocation({",
+      "\tlongitude: '',",
+      "\tlatitude: '',",
+      "\tname: '',",
+      "\taddress: '',",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "使用支付宝内置地图查看位置"
+  },
+  "my.chooseLocation": {
+    "prefix": "my.chl",
+    "body": [
+      "my.chooseLocation({",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "使用支付宝内置地图选择位置"
+  },
+  "my.navigateToMiniProgram": {
+    "prefix": "my.ntmp",
+    "body": [
+      "my.navigateToMiniProgram({",
+      "\tappId: '$2',",
+      "\tpath: '',",
+      "\textraData: {},",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "跳转到同主体小程序"
+  },
+  "my.navigateBackMiniProgram": {
+    "prefix": "my.nbmp",
+    "body": [
+      "my.navigateBackMiniProgram({",
+      "\textraData: {},",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "跳转回上一个小程序"
+  },
+  "my.setStorage": {
+    "prefix": "my.ss",
+    "body": [
+      "my.setStorage({",
+      "\tkey: '$3',",
+      "\tdata: {",
+      "\t\t$2",
+      "\t},",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "缓存"
+  },
+  "my.setStorageSync": {
+    "prefix": "my.sss",
+    "body": [
+      "my.setStorageSync({",
+      "\tkey: '$1',",
+      "\tdata: {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "同步缓存"
+  },
+  "my.getStorage": {
+    "prefix": "my.gs",
+    "body": [
+      "my.getStorage({",
+      "\tkey: '$2',",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "获取缓存数据"
+  },
+  "my.getStorageSync": {
+    "prefix": "my.gss",
+    "body": ["my.getStorageSync({ key: $0 })"],
+    "description": "同步获取缓存数据"
+  },
+  "my.removeStorage": {
+    "prefix": "my.rms",
+    "body": [
+      "my.removeStorage({",
+      "\tkey: '$2',",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "删除缓存数据"
+  },
+  "my.removeStorageSync": {
+    "prefix": "my.rmss",
+    "body": ["my.removeStorageSync({ key: $0 })"],
+    "description": "同步删除缓存数据"
+  },
+  "my.clearStorage": {
+    "prefix": "my.cs",
+    "body": ["my.clearStorage()"],
+    "description": "清除本地数据缓存"
+  },
+  "my.clearStorageSync": {
+    "prefix": "my.css",
+    "body": ["my.clearStorageSync()"],
+    "description": "同步清除本地数据缓存"
+  },
+  "my.getStorageInfo": {
+    "prefix": "my.gsi",
+    "body": [
+      "my.getStorageInfo({",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "异步获取当前storage的相关信息"
+  },
+  "my.getStorageInfoSync": {
+    "prefix": "my.gsis",
+    "body": ["my.getStorageInfoSync()"],
+    "description": "同步获取当前storage的相关信息"
+  },
+  "my.httpRequest": {
+    "prefix": "my.http",
+    "body": [
+      "my.httpRequest({",
+      "\turl: '$2',",
+      "\theaders: {},",
+      "\tdata: {},",
+      "\tdataType: 'json',",
+      "\tmethod: 'GET',",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "\tcomplete: (res) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "http 请求"
+  },
+  "my.uploadFile": {
+    "prefix": "my.up",
+    "body": [
+      "my.uploadFile({",
+      "\turl: '$2',",
+      "\tfilePath: '',",
+      "\tfileName: '',",
+      "\tfileType: 'image',",
+      "\theader: {},",
+      "\tformData: {},",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "上传文件"
+  },
+  "my.connectSocket": {
+    "prefix": "my.cos",
+    "body": [
+      "my.connectSocket({",
+      "\turl: '$2',",
+      "\theader: {},",
+      "\tdata: {},",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "创建 WebSocket 连接"
+  },
+  "my.downloadFile": {
+    "prefix": "my.dl",
+    "body": [
+      "my.downloadFile({",
+      "\turl: '$2',",
+      "\theader: {},",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "下载文件"
+  },
+  "my.sendSocketMessage": {
+    "prefix": "my.ssm",
+    "body": [
+      "my.sendSocketMessage({",
+      "\tdata: '$2',",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "发送WebSocket数据"
+  },
+  "my.onSocketMessage": {
+    "prefix": "my.onsm",
+    "body": ["my.onSocketMessage((res)=>{", "\t$0", "})"],
+    "description": "监听WebSocket接受消息事件"
+  },
+  "my.offSocketMessage": {
+    "prefix": "my.offsm",
+    "body": ["my.offSocketMessage()"],
+    "description": "取消监听WebSocket接收消息事件"
+  },
+  "my.closeSocket": {
+    "prefix": "my.cst",
+    "body": ["my.closeSocket()"],
+    "description": "关闭WebSocket连接"
+  },
+  "my.onSocketClose": {
+    "prefix": "my.onsc",
+    "body": ["my.onSocketClose((res)=>{", "\t$0", "})"],
+    "description": "监听WebSocket关闭"
+  },
+  "my.offSocketClose": {
+    "prefix": "my.offsc",
+    "body": ["my.offSocketClose()"],
+    "description": "取消监听WebSocket关闭"
+  },
+  "my.onSocketOpen": {
+    "prefix": "my.onso",
+    "body": ["my.onSocketOpen((res)=>{", "\t$0", "})"],
+    "description": "监听WebSocket连接打开事件"
+  },
+  "my.offSocketOpen": {
+    "prefix": "my.offso",
+    "body": ["my.offSocketOpen($0)"],
+    "description": "取消监听WebSocket连接打开事件"
+  },
+  "my.onSocketError": {
+    "prefix": "my.onse",
+    "body": ["my.onSocketError((res)=>{", "\t$0", "})"],
+    "description": "监听WebSocket错误"
+  },
+  "my.offSocketError": {
+    "prefix": "my.offse",
+    "body": ["my.offSocketError($0)"],
+    "description": "取消监听WebSocket错误"
+  },
+  "my.setKeepScreenOn": {
+    "prefix": "my.sks",
+    "body": [
+      "my.setKeepScreenOn({",
+      "\tkeepScreenOn: true,",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "设置是否保持屏幕长亮状态"
+  },
+  "my.setScreenBrightness": {
+    "prefix": "my.ssb",
+    "body": [
+      "my.setScreenBrightness({",
+      "\tbrightness: 0.5, // 0-1",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "设置屏幕亮度"
+  },
+  "my.getScreenBrightness": {
+    "prefix": "my.gsb",
+    "body": [
+      "my.getScreenBrightness({",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "获取屏幕亮度"
+  },
+  "my.onUserCaptureScreen": {
+    "prefix": "my.onuc",
+    "body": ["my.onUserCaptureScreen(()=>{", "\t$0", "})"],
+    "description": "监听用户截屏事件"
+  },
+  "my.offUserCaptureScreen": {
+    "prefix": "my.offuc",
+    "body": ["my.offUserCaptureScreen()"],
+    "description": "取消监听用户截屏事件"
+  },
+  "my.showAuthGuide": {
+    "prefix": "my.sag",
+    "body": ["my.showAuthGuide({", "\tauthType: '$0'", "})"],
+    "description": "权限引导"
+  },
+  "my.getServerTime": {
+    "prefix": "my.gst",
+    "body": [
+      "my.getServerTime({",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: () => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "获取当前服务器时间的毫秒数"
+  },
+  "my.getNetworkType": {
+    "prefix": "my.gnt",
+    "body": [
+      "my.getNetworkType({",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: () => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "获取当前网络状态"
+  },
+  "my.onNetworkStatusChange": {
+    "prefix": "my.onnet",
+    "body": ["my.onNetworkStatusChange((res) => {", "\t$0", "})"],
+    "description": "监听网络状态的变化"
+  },
+  "my.offNetworkStatusChange": {
+    "prefix": "my.offnet",
+    "body": ["my.offNetworkStatusChange()"],
+    "description": "取消网络状态变化的监听"
+  },
+  "my.getClipboard": {
+    "prefix": "my.gcb",
+    "body": [
+      "my.getClipboard({",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: () => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "获取剪贴板数据"
+  },
+  "my.setClipboard": {
+    "prefix": "my.scb",
+    "body": [
+      "my.setClipboard({",
+      "\ttext: '$2',",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: () => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "设置剪贴板数据"
+  },
+  "my.watchShake": {
+    "prefix": "my.wh",
+    "body": ["my.watchShake({", "\tsuccess: () => {", "\t\t$0", "\t},", "})"],
+    "description": "摇一摇"
+  },
+  "my.vibrate": {
+    "prefix": "my.v",
+    "body": ["my.vibrate({", "\tsuccess: () => {", "\t\t$0", "\t},", "})"],
+    "description": "震动"
+  },
+  "my.makePhoneCall": {
+    "prefix": "my.mpc",
+    "body": ["my.makePhoneCall({ number: '$0' })"],
+    "description": "拨打电话"
+  },
+  "my.getSystemInfo": {
+    "prefix": "my.gsy",
+    "body": [
+      "my.getSystemInfo({",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: () => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "获取系统信息"
+  },
+  "my.getSystemInfoSync": {
+    "prefix": "my.gsys",
+    "body": ["my.getSystemInfoSync()"],
+    "description": "同步获取系统信息"
+  },
+  "my.SDKVersion": {
+    "prefix": "my.sdk",
+    "body": ["my.SDKVersion"],
+    "description": "获取基础库版本号"
+  },
+  "my.canIUse": {
+    "prefix": "my.can",
+    "body": ["my.canIUse('$0')"],
+    "description": "canIUse"
+  },
+  "my.getAuthCode": {
+    "prefix": "my.gac",
+    "body": [
+      "my.getAuthCode({",
+      "\tscopes: 'auth_base',",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: () => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "获取授权码"
+  },
+  "my.getAuthUserInfo": {
+    "prefix": "my.gui",
+    "body": [
+      "my.getAuthUserInfo({",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: () => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "获取会员信息"
+  },
+  "my.datePicker": {
+    "prefix": "my.dp",
+    "body": [
+      "my.datePicker({",
+      "\tformat: 'yyyy-MM-dd',",
+      "\tcurrentDate: '',",
+      "\tstartDate: '',",
+      "\tendDate: '',",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: () => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "选择日期"
+  },
+  "my.choosePhoneContact": {
+    "prefix": "my.chpc",
+    "body": [
+      "my.choosePhoneContact({",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "选择系统通信录中某个联系人的电话"
+  },
+  "my.chooseAlipayContact": {
+    "prefix": "my.chac",
+    "body": [
+      "my.chooseAlipayContact({",
+      "\tcount: 1, // 单次最多选择联系人个数，默认 1，最大 10",
+      "\tsuccess: (contacts) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "选择一个或者多个支付宝联系人"
+  },
+  "my.chooseContact": {
+    "prefix": "my.chc",
+    "body": [
+      "my.chooseContact({",
+      "\tchooseType: 'single',",
+      "\tincludeMobileContactMode: 'known',",
+      "\tincludeMe: false,",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "唤起选人组件"
+  },
+  "my.openCardList": {
+    "prefix": "my.ocl",
+    "body": ["my.openCardList()"],
+    "description": "打开支付宝卡列表"
+  },
+  "my.openVoucherList": {
+    "prefix": "my.ovl",
+    "body": ["my.openVoucherList()"],
+    "description": "打开支付宝券列表"
+  },
+  "my.openTicketList": {
+    "prefix": "my.otl",
+    "body": ["my.openTicketList()"],
+    "description": "打开支付宝票列表"
+  },
+  "my.openMerchantCardList": {
+    "prefix": "my.omcl",
+    "body": ["my.openMerchantCardList({", "\tpartnerId: '$0',", "})"],
+    "description": "打开某个商户的卡列表"
+  },
+  "my.openMerchantVoucherList": {
+    "prefix": "my.omvl",
+    "body": ["my.openMerchantVoucherList({", "\tpartnerId: '$0',", "})"],
+    "description": "打开某个商户的券列表"
+  },
+  "my.openMerchantTicketList": {
+    "prefix": "my.omtl",
+    "body": ["my.openMerchantTicketList({", "\tpartnerId: '$0',", "})"],
+    "description": "打开某个商户的票列表"
+  },
+  "my.openCardDetail": {
+    "prefix": "my.ocd",
+    "body": ["my.openCardDetail({", "\tpassId: '$0',", "})"],
+    "description": "打开用户的某张卡的详情页"
+  },
+  "my.openVoucherDetail": {
+    "prefix": "my.ovd",
+    "body": ["my.openVoucherDetail({", "\tpassId: '$0',", "})"],
+    "description": "打开用户的某张券的详情页（非口碑）"
+  },
+  "my.openKBVoucherDetail": {
+    "prefix": "my.okvd",
+    "body": ["my.openKBVoucherDetail({", "\tpassId: '$0',", "})"],
+    "description": "打开用户的某张券的详情页（口碑）"
+  },
+  "my.openTicketDetail": {
+    "prefix": "my.otd",
+    "body": ["my.openTicketDetail({", "\tpassId: '$0',", "})"],
+    "description": "打开用户的某张票的详情页"
+  },
+  "my.scan": {
+    "prefix": "my.sc",
+    "body": [
+      "my.scan({",
+      "\ttype: 'qr',  // qr or bar ",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "扫码"
+  },
+  "my.rsa": {
+    "prefix": "my.rsa",
+    "body": [
+      "my.rsa({",
+      "\taction: 'encrypy', // encrypy加密，decrypt解密",
+      "\ttext: '${2:encrypyText}',",
+      "\tkey: '',",
+      "\tsuccess: (res) => {",
+      "\t\t$1",
+      "\t},",
+      "\tfail: (err) => {",
+      "\t\t$0",
+      "\t},",
+      "})"
+    ],
+    "description": "rsa加解密"
+  },
+  "my.reportAnalytics": {
+    "prefix": "my.rea",
+    "body": ["my.reportAnalytics('${0:eventName}', {", "\tstatus: 200", "})"],
+    "description": "自定义分析"
+  },
+  "my.hideShareMenu": {
+    "prefix": "my.hsm",
+    "body": ["my.hideShareMenu()"],
+    "description": "隐藏分享按钮"
+  },
+  "onShareAppMessage": {
+    "prefix": "osam",
+    "body": [
+      "onShareAppMessage() {",
+      "\treturn {",
+      "\t\ttitle: '$1',",
+      "\t\tdesc: '',",
+      "\t\tpath: '$0',",
+      "\t\tcontent: '',",
+      "\t\timageUrl: '',",
+      "\t};",
+      "},"
+    ],
+    "description": "分享"
+  }
+}

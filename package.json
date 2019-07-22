@@ -6,7 +6,14 @@
   "engines": {
     "vscode": "^1.36.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kunduin/vscode-axml"
+  },
   "main": "./client/out/extension",
+  "icon": "logo.jpg",
+  "author": "Kunduin <kunduin@outlook.com>",
+  "publisher": "Kunduin",
   "categories": [
     "Programming Languages"
   ],
@@ -35,6 +42,16 @@
         "embeddedLanguages": {
           "source.js": "javascript"
         }
+      }
+    ],
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "axml",
+        "path": "./snippets/axml.json"
       }
     ]
   },
