@@ -18,10 +18,10 @@ import {
   TextEdit,
   Range,
   Position
-} from 'vscode-languageserver';
-import { IPrettyHtml } from './prettyhtml';
+} from "vscode-languageserver";
+import { js_beautify } from "./js-beautify";
 
-const prettyhtml: IPrettyHtml = require('@starptech/prettyhtml');
+const beautify: js_beautify = require("js-beautify");
 
 // Create a connection for the server. The connection uses Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -74,7 +74,7 @@ connection.onInitialized(() => {
   }
   if (hasWorkspaceFolderCapability) {
     connection.workspace.onDidChangeWorkspaceFolders(_event => {
-      connection.console.log('Workspace folder change event received.');
+      connection.console.log("Workspace folder change event received.");
     });
   }
 });
@@ -109,9 +109,14 @@ connection.onDidChangeConfiguration(change => {
 
 connection.onDocumentFormatting(async ({ textDocument, options }) => {
   const doc = documents.get(textDocument.uri)!;
-  TextDocument;
   const fileText = doc.getText();
-  const resultFileText = await prettyhtml(fileText).contents;
+  const resultFileText = await beautify.html(fileText, {
+    wrap_attributes: "force-expand-multiline",
+    wrap_line_length: 100,
+    indent_size: 2,
+    preserve_newlines: true,
+    indent_handlebars: true
+  });
   const fullRange = Range.create(
     doc.positionAt(0),
     doc.positionAt(fileText.length)
