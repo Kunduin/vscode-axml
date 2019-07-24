@@ -4,10 +4,9 @@ Add basic support for .axml file.
 
 ## Features
 
-- [X] syntax highlight
-- [X] formatter
-- [X] code snippets
-
+- [x] syntax highlight
+- [x] formatter
+- [x] code snippets
 
 ![feature X](https://raw.githubusercontent.com/Kunduin/vscode-axml/master/intro.gif)
 
@@ -17,8 +16,12 @@ Add basic support for .axml file.
 
 Initial release of vscode-axml
 
-### 0.1.1
+### 0.1.0
 
 Add [xinconan/aliapp-snippet](https://github.com/xinconan/aliapp-snippet)'s code snippets.
+
+### 0.1.1
+
+Use a new formatter.
 
 **Enjoy!**
