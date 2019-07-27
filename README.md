@@ -24,4 +24,8 @@ Add [xinconan/aliapp-snippet](https://github.com/xinconan/aliapp-snippet)'s code
 
 Use a new formatter.
 
+### 0.1.5
+
+Add more language configuration.
+
 **Enjoy!**
