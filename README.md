@@ -20,7 +20,7 @@ Initial release of vscode-axml
 
 Add [xinconan/aliapp-snippet](https://github.com/xinconan/aliapp-snippet)'s code snippets.
 
-### 0.1.1
+### 0.1.3
 
 Use a new formatter.
 
