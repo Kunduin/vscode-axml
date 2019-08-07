@@ -28,4 +28,8 @@ Use a new formatter.
 
 Add more language configuration.
 
+### 0.1.6
+
+Disable auto closing pair「"<",">"」. You can use [Auto Close Tag](https://github.com/formulahendry/vscode-auto-close-tag) for better coding experience
+
 **Enjoy!**
